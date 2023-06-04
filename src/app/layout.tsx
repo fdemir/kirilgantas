@@ -10,8 +10,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className="container p-8">
+    <html lang="tr">
+      <body className="container p-8 text-xl md:px-64">
         <div className="p-4 bg-emerald-50">{children}</div>
       </body>
     </html>

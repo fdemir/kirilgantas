@@ -1,12 +1,17 @@
+"use client";
+import Form from "./form";
+
 export default function Home() {
+  const onSubmit = (content: string) => {
+    fetch("/api/add", {
+      method: "POST",
+      body: JSON.stringify({ content }),
+    });
+  };
+
   return (
     <div>
-      <span></span>
-      <textarea
-        className="w-full h-32 p-4 outline-none"
-        placeholder="icini dok"
-      ></textarea>
-      <button className="text-xl italic">kaydet</button>
+      <Form onSubmit={onSubmit} />
     </div>
   );
 }
